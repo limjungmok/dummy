@@ -25,7 +25,7 @@ const env = getClientEnvironment(publicUrl);
 
 // Extract sass
 const extractSass = new ExtractTextPlugin({
-  filename: "[name].[contenthash].css",
+  filename: 'app.[contenthash:8].css',
   // disable: process.env.NODE_ENV === "development"
 });
 
@@ -130,20 +130,6 @@ module.exports = {
         include: paths.appSrc,
       },
       {
-        test: /\.scss$/,
-        use: extractSass.extract({
-          use: [
-            {
-              loader: require.resolve("css-loader")
-            },
-            {
-              loader: require.resolve("sass-loader")
-            }
-          ],
-          fallback: require.resolve("css-loader")
-        })
-      },
-      {
         // "oneOf" will traverse all following loaders until one will
         // match the requirements. When no loader matches it will fall
         // back to the "file" loader at the end of the loader list.
@@ -172,42 +158,45 @@ module.exports = {
               cacheDirectory: true,
             },
           },
-          // "postcss" loader applies autoprefixer to our CSS.
-          // "css" loader resolves paths in CSS and adds assets as dependencies.
-          // "style" loader turns CSS into JS modules that inject <style> tags.
-          // In production, we use a plugin to extract that CSS to a file, but
-          // in development "style" loader enables hot editing of CSS.
           {
-            test: /\.css$/,
-            use: [
-              require.resolve('style-loader'),
-              {
-                loader: require.resolve('css-loader'),
-                options: {
-                  importLoaders: 1,
+            test: /\.scss$/,
+            use: extractSass.extract({
+              use: [
+                {
+                  loader: require.resolve('css-loader'),
+                  options: {
+                    sourceMap: true
+                  }
                 },
-              },
-              {
-                loader: require.resolve('postcss-loader'),
-                options: {
-                  // Necessary for external CSS imports to work
-                  // https://github.com/facebookincubator/create-react-app/issues/2677
-                  ident: 'postcss',
-                  plugins: () => [
-                    require('postcss-flexbugs-fixes'),
-                    autoprefixer({
-                      browsers: [
-                        '>1%',
-                        'last 4 versions',
-                        'Firefox ESR',
-                        'not ie < 9', // React doesn't support IE8 anyway
-                      ],
-                      flexbox: 'no-2009',
-                    }),
-                  ],
+                {
+                  loader: require.resolve('postcss-loader'),
+                  options: {
+                    // Necessary for external CSS imports to work
+                    // https://github.com/facebookincubator/create-react-app/issues/2677
+                    ident: 'postcss',
+                    plugins: () => [
+                      require('postcss-flexbugs-fixes'),
+                      autoprefixer({
+                        browsers: [
+                          '>1%',
+                          'last 4 versions',
+                          'Firefox ESR',
+                          'not ie < 9', // React doesn't support IE8 anyway
+                        ],
+                        flexbox: 'no-2009',
+                      }),
+                    ],
+                  },
                 },
-              },
-            ],
+                {
+                  loader: require.resolve('sass-loader'),
+                  options: {
+                    sourceMap: true
+                  }
+                }
+              ],
+              fallback: require.resolve('style-loader')
+            })
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
