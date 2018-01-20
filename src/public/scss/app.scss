@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 // common
-@import "./common/variables";
-@import "./common/base";
-@import "./common/placeholders";
-@import "./common/mixins";
+@import "common/variables";
+@import "common/base";
+@import "common/placeholders";
+@import "common/mixins";
 
 // import
-@import "./import/import";
+@import "import/import";
