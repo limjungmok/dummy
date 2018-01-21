@@ -9,6 +9,7 @@ class App extends Component {
         </header>
         <div id='content'>
           Content
+          <span className='icon1' />
         </div>
         <footer id='footer'>
           Footer

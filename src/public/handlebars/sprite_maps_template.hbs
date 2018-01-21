@@ -1,0 +1,8 @@
+// Sprites Map import
+{{#each sprites as |sprite|}}
+@import "{{@root.path}}/{{sprite.css_file_name}}";
+{{/each}}
+
+// Sprites Map List
+$map_list: {{#each sprites as |sprite|}}${{sprite.spritesheet_name}}, {{/each}};
+$ratio: {{ratio}};
