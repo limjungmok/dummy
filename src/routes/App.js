@@ -9,8 +9,13 @@ class App extends Component {
         </header>
         <div id='content'>
           Content
-          <span className='icon1' />
-          <span className='icon2' />
+          <div className='icon_area'>
+            <span className='icon1' />
+            <span className='icon2' />
+            <span className='icon3' />
+            <span className='icon4' />
+            <span className='icon5' />
+          </div>
         </div>
         <footer id='footer'>
           Footer

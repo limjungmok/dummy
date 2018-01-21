@@ -9,10 +9,3 @@
   background: #303030;
   color: #c0c0c0;
 }
-
-.icon1 {
-  @include get-sprite(icon_funcbtn_findroad, $sp_app);
-}
-.icon2 {
-  @include get-sprite(icon_funcbtn_tel, $sp_app);
-}
