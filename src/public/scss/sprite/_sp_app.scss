@@ -1,0 +1,45 @@
+// Sprites Map
+$sp_app: (
+name: 'sp_app',
+width: 120px,
+height: 80px,
+image: '../public/images/sp_app.png',
+sprites: (
+icon_funcbtn_findroad: (
+offset-x: 0px,
+offset-y: 0px,
+width: 40px,
+height: 40px,
+),
+icon_funcbtn_navigation: (
+offset-x: -40px,
+offset-y: 0px,
+width: 40px,
+height: 40px,
+),
+icon_funcbtn_nreserve: (
+offset-x: 0px,
+offset-y: -40px,
+width: 40px,
+height: 40px,
+),
+icon_funcbtn_share: (
+offset-x: -40px,
+offset-y: -40px,
+width: 40px,
+height: 40px,
+),
+icon_funcbtn_talktalk: (
+offset-x: -80px,
+offset-y: 0px,
+width: 40px,
+height: 40px,
+),
+icon_funcbtn_tel: (
+offset-x: -80px,
+offset-y: -40px,
+width: 40px,
+height: 40px,
+),
+)
+);
