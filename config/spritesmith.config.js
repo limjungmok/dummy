@@ -15,6 +15,7 @@ const config = {
   spriteMapsDest: '../src/public/scss/common/_sprites_maps.scss',
   spriteMapsTemplate: '../src/public/handlebars/sprite_maps_template.hbs',
   ratio: 2,
+  padding: 4,
 };
 
 const srcPath = path.join(__dirname, config.spriteSrc);
@@ -58,13 +59,19 @@ const plugins = folders
     },
     target: {
       image: path.resolve(destImgPath, config.imgName.replace(/\[folder\]/g, folder)),
-      css: [[path.resolve(destScssPath, config.cssName.replace(/\[folder\]/g, folder)), {
-        spritesheetName: config.cssSpritesheetName.replace(/\[folder\]/g, folder),
-        format: 'handlebars_based_template',
-      }]],
+      css: [
+        [
+          path.resolve(destScssPath, config.cssName.replace(/\[folder\]/g, folder)), {
+            spritesheetName: config.cssSpritesheetName.replace(/\[folder\]/g, folder),
+            format: 'handlebars_based_template',
+          }
+        ]
+      ],
     },
+    padding: 4,
     apiOptions: {
-      cssImageRef: `${config.spriteImgDest}/${config.imgName.replace(/\[folder\]/g, folder)}`,
+      // cssImageRef: `${config.spriteImgDest}/${config.imgName.replace(/\[folder\]/g, folder)}`,
+      cssImageRef: `./images/${config.imgName.replace(/\[folder\]/g, folder)}`,
     },
     customTemplates: {
       handlebars_based_template: path.join(__dirname, config.cssTemplate),

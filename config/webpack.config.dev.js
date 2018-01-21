@@ -25,10 +25,7 @@ const publicUrl = '';
 const env = getClientEnvironment(publicUrl);
 
 // Extract sass
-const extractSass = new ExtractTextPlugin({
-  filename: 'app.[contenthash:8].css',
-  // disable: process.env.NODE_ENV === "development"
-});
+const extractSass = new ExtractTextPlugin('app.css');
 
 // This is the development configuration.
 // It is focused on developer experience and fast rebuilds.
@@ -164,30 +161,38 @@ module.exports = {
             use: extractSass.extract({
               use: [
                 {
-                  loader: require.resolve('css-loader')
-                },
-                {
-                  loader: require.resolve('postcss-loader'),
+                  loader: require.resolve('css-loader'),
                   options: {
-                    // Necessary for external CSS imports to work
-                    // https://github.com/facebookincubator/create-react-app/issues/2677
-                    ident: 'postcss',
-                    plugins: () => [
-                      require('postcss-flexbugs-fixes'),
-                      autoprefixer({
-                        browsers: [
-                          '>1%',
-                          'last 4 versions',
-                          'Firefox ESR',
-                          'not ie < 9', // React doesn't support IE8 anyway
-                        ],
-                        flexbox: 'no-2009',
-                      }),
-                    ],
-                  },
+                    url: false,
+                    minimize: false,
+                    sourceMap: true
+                  }
                 },
+                // {
+                //   loader: require.resolve('postcss-loader'),
+                //   options: {
+                //     // Necessary for external CSS imports to work
+                //     // https://github.com/facebookincubator/create-react-app/issues/2677
+                //     ident: 'postcss',
+                //     plugins: () => [
+                //       require('postcss-flexbugs-fixes'),
+                //       autoprefixer({
+                //         browsers: [
+                //           '>1%',
+                //           'last 4 versions',
+                //           'Firefox ESR',
+                //           'not ie < 9', // React doesn't support IE8 anyway
+                //         ],
+                //         flexbox: 'no-2009',
+                //       }),
+                //     ],
+                //   },
+                // },
                 {
-                  loader: require.resolve('sass-loader')
+                  loader: require.resolve('sass-loader'),
+                  options: {
+                    sourceMap: true
+                  }
                 }
               ],
               fallback: require.resolve('style-loader')
@@ -216,8 +221,8 @@ module.exports = {
     ],
   },
   plugins: [
-    ...spritesmithPlugins,
     extractSass,
+    ...spritesmithPlugins,
     // Makes some environment variables available in index.html.
     // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
     // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">

@@ -21,3 +21,9 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea/
+
+/public/css
+/public/images
+
+/src/public/scss/common/_sprites_maps.scss
+/src/public/scss/sprite

@@ -10,6 +10,7 @@ class App extends Component {
         <div id='content'>
           Content
           <span className='icon1' />
+          <span className='icon2' />
         </div>
         <footer id='footer'>
           Footer
