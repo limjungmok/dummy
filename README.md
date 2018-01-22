@@ -1,3 +1,3 @@
 # Base project
 
-Setting sass-loader
+Setting webpack-spritesmith
