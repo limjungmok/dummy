@@ -1,0 +1,27 @@
+/* _icon.scss */
+
+.icon_area {
+  padding: 50px;
+  text-align: center;
+  [class^='icon'] + [class^='icon'] {
+    margin-left: 10px;
+  }
+}
+.icon1 {
+  @include get-sprite(icon_funcbtn_tel, $sp_app);
+}
+.icon2 {
+  @include get-sprite(icon_funcbtn_nreserve, $sp_app);
+}
+.icon3 {
+  @include get-sprite(icon_funcbtn_findroad, $sp_app);
+}
+.icon4 {
+  @include get-sprite(icon_funcbtn_navigation, $sp_app);
+}
+.icon5 {
+  @include get-sprite(icon_funcbtn_talktalk, $sp_app);
+}
+.icon6 {
+  @include get-sprite(icon_funcbtn_share, $sp_app);
+}
