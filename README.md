@@ -1,1 +1,3 @@
-# base project
+# Base project
+
+Setting sass-loader
