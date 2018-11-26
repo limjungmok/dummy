@@ -1,0 +1,70 @@
+[{
+  "id" : "m001",
+  "title": "IDOL",
+  "artist": "방탄소년단",
+  "playtime": "03:42",
+  "thumbnail": "https://cdnimg.melon.co.kr/cm/album/images/101/97/480/10197480_500.jpg?84777617ecc6d64d0177f28466029a74/melon/quality/80/optimize"
+},
+{
+  "id" : "m002",
+  "title": "AND I",
+  "artist": "뉴이스트 W",
+  "playtime": "03:54",
+  "thumbnail": "https://cdnimg.melon.co.kr/cm/album/images/101/00/941/10100941_500.jpg?183d934585ddf780c6ed387d7f6f402b/melon/quality/80/optimize"
+},
+{
+  "id" : "m003",
+  "title": "Way Back Home",
+  "artist": "숀",
+  "playtime": "03:34",
+  "thumbnail": "https://cdnimg.melon.co.kr/cm/album/images/101/79/508/10179508_500.jpg?7a5f915026311f6a136facc7aa9f196c/melon/quality/80/optimize"
+},
+{
+  "id" : "m004",
+  "title": "Dejavu",
+  "artist": "뉴이스트 W",
+  "playtime": "03:19",
+  "thumbnail": "https://cdnimg.melon.co.kr/cm/album/images/101/78/912/10178912_500.jpg?26e73869b5389b2e9f7b2264b142fad8/melon/quality/80/optimize"
+},
+{
+  "id" : "m005",
+  "title": "Power Up",
+  "artist": "레드벨벳",
+  "playtime": "03:22",
+  "thumbnail": "https://cdnimg.melon.co.kr/cm/album/images/101/91/694/10191694_500.jpg?c05773e5f591a756050e3452af9615bf/melon/quality/80/optimize"
+},
+{
+  "id" : "m006",
+  "title": "Euphoria",
+  "artist": "방탄소년단",
+  "playtime": "03:48",
+  "thumbnail": "https://cdnimg.melon.co.kr/cm/album/images/101/97/480/10197480_500.jpg?84777617ecc6d64d0177f28466029a74/melon/quality/80/optimize"
+},
+{
+  "id" : "m007",
+  "title": "Dance The Night Away",
+  "artist": "트와이스",
+  "playtime": "03:00",
+  "thumbnail": "https://cdnimg.melon.co.kr/cm/album/images/101/83/127/10183127_500.jpg?21a98b89f347feb44dcc70226f9d6276/melon/quality/80/optimize"
+},
+{
+  "id" : "m008",
+  "title": "뚜두뚜두 (DDU-DU DDU-DU)",
+  "artist": "BLACKPINK",
+  "playtime": "03:29",
+  "thumbnail": "https://cdnimg.melon.co.kr/cm/album/images/101/76/415/10176415_500.jpg?7bebc774b094d72c1c22165612ef0948/melon/quality/80/optimize"
+},
+{
+  "id" : "m009",
+  "title": "모든 날, 모든 순간",
+  "artist": "폴킴",
+  "playtime": "03:30",
+  "thumbnail": "https://cdnimg.melon.co.kr/cm/album/images/101/49/492/10149492_500.jpg?fa24fa8eabdd1e9e13759225831e2eec/melon/quality/80/optimize"
+},
+{
+  "id" : "m010",
+  "title": "너나 해",
+  "artist": "마마무",
+  "playtime": "03:16",
+  "thumbnail": "https://cdnimg.melon.co.kr/cm/album/images/101/85/416/10185416_500.jpg?f8a2c162c7fee22139c2f88b6661dc7c/melon/quality/80/optimize"
+}]

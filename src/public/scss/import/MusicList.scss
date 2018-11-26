@@ -1,0 +1,42 @@
+.music_list {}
+.music_item {
+  & {
+    display: flex;
+    padding: 10px 0;
+  }
+  & + .music_item {
+    border-top: 1px solid #dedede;
+  }
+  &[aria-current] {
+    font-weight: 600;
+  }
+  .thumbnail {
+    flex-shrink: 1;
+    width: 60px;
+    height: 60px;
+    border-radius: 2px;
+  }
+  .img {
+    width: 100%;
+    border-radius: inherit;
+  }
+  .details {
+    & {
+      flex-shrink: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 10px;
+      font-size: 14px;
+      color: #242424;
+    }
+  }
+  .title {
+    margin-left: 4px;
+  }
+  .artist {
+    display: block;
+    font-size: 12px;
+    color: #999;
+  }
+}

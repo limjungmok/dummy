@@ -7,6 +7,10 @@
 @import "common/mixins";
 @import "common/sprites";
 
-// import
-@import "import/layout";
-@import "import/icon";
+.container {
+  position: relative;
+  padding-bottom: 100px;
+}
+
+@import "import/MusicPlayer";
+@import "import/MusicList";

@@ -1,3 +1,3 @@
-# Base project
+# Music Player
 
-Setting sass-loader, webpack-spritesmith & redux
+Setting sass-loader, webpack-spritesmith (& redux)
